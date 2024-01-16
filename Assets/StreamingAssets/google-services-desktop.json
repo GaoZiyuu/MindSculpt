@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "710053589294",
+    "project_id": "mindsculpt-de553",
+    "storage_bucket": "mindsculpt-de553.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710053589294:android:55262fc2350ae94fc8cabf",
+        "android_client_info": {
+          "package_name": "com.zookeepers.mindsculpt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5j5TNqryB_GYhWX2NztGD8uTV2NCe9tQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
