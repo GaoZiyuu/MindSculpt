@@ -50,16 +50,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Depth: -162.8
-    - _Displacement: 4.59
-    - _Foam_Depth: 2.76
-    - _Foam_Strength: 3.96
+    - _Depth: 1
+    - _Displacement: 1
+    - _Foam_Depth: 1
+    - _Foam_Strength: 1
     - _Foam_Tile: 2.23
-    - _Normal_Strength: 5.39
+    - _Normal_Strength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 3.78
-    - _Strength: 12.29
+    - _Smoothness: 1
+    - _Strength: 0
     m_Colors:
     - _Deep_Water_Color: {r: 0.059405774, g: 0, b: 1, a: 0}
     - _Shallow_Water_Color: {r: 0.4575472, g: 1, b: 0.9945782, a: 0}
