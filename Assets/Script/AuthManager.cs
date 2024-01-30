@@ -14,6 +14,7 @@ using TMPro;
 using Firebase.Database;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using System;
 
 public class AuthManager : MonoBehaviour
 {
@@ -127,14 +128,18 @@ public class AuthManager : MonoBehaviour
 
     private IEnumerator Login(string _email, string _password)
     {
-        warningLoginText.text = "Logging in"
+        warningLoginText.text = "Logging in";
+
+       
 ;        //Pass to firebase the email and password
         Task<AuthResult> LoginTask = auth.SignInWithEmailAndPasswordAsync(_email, _password);
+        warningLoginText.text += "executed task";
         //Wait until the task completes
         yield return new WaitUntil(predicate: () => LoginTask.IsCompleted);
-
-        //if there is an error completing the above task
-        if (LoginTask.Exception != null)
+        try
+        {
+            //if there is an error completing the above task
+            if (LoginTask.Exception != null)
         {
             //Check for errors and handles it
             Debug.LogWarning(message: $"Failed to register task with {LoginTask.Exception}");
@@ -146,22 +151,25 @@ public class AuthManager : MonoBehaviour
             switch (errorCode)
             {
                 case AuthError.MissingEmail:
-                    message = "Missing Email";
+                    message += "Missing Email";
                     break;
                 case AuthError.MissingPassword:
-                    message = "Missing Password";
+                    message += "Missing Password";
                     break;
                 case AuthError.WrongPassword:
-                    message = "Wrong Password";
+                    message += "Wrong Password";
                     break;
                 case AuthError.InvalidEmail:
-                    message = "Invalid Email";
+                    message += "Invalid Email";
                     break;
                 case AuthError.UserNotFound:
-                    message = "Account does not exist";
+                    message += "Account does not exist";
+                    break;
+                default:
+                    message += "An error has occured";
                     break;
             }
-            warningLoginText.text = LoginTask.Exception.ToString();
+            warningLoginText.text += LoginTask.Exception.ToString();
         }
         else
         {
@@ -174,6 +182,11 @@ public class AuthManager : MonoBehaviour
             confirmLoginText.text = "Logged In";
             SceneManager.LoadScene(1);
 
+        }
+        }catch(Exception e)
+        {
+            Debug.LogException(e);
+            warningLoginText.text += e.ToString();
         }
     }
 
@@ -270,5 +283,23 @@ public class AuthManager : MonoBehaviour
             }
         }
 
+    }
+
+    public TextMeshProUGUI t;
+
+    private void OnEnable()
+    {
+        Application.logMessageReceived += Debugt;
+    }
+
+    private void OnDisable()
+    {
+
+        Application.logMessageReceived -= Debugt;
+    }
+
+    private void Debugt(string msg, string st, LogType ty)
+    {
+        t.text += msg + "\n";
     }
 }
