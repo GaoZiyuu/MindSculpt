@@ -36,6 +36,7 @@ public class AuthManager : MonoBehaviour
     public TMP_Text warningLoginText; // text that shows up when there is a error logging in
     public TMP_Text confirmLoginText; // text to inform user that they have successfully log in
 
+    public TMP_Text text;
 
 
     /// <summary>
@@ -57,15 +58,18 @@ public class AuthManager : MonoBehaviour
         //Check that all of the necessary dependencies for Firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
+            text.text = "outside";
             dependencyStatus = task.Result;
             if (dependencyStatus == DependencyStatus.Available)
             {
                 //If they are avalible Initialize Firebase
                 InitializeFirebase();
+                text.text = "avaiable";
             }
             else
             {
                 Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
+                text.text = "else";
             }
         });
 
@@ -87,7 +91,8 @@ public class AuthManager : MonoBehaviour
     {
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
-        auth = FirebaseAuth.DefaultInstance;       
+        auth = FirebaseAuth.DefaultInstance;
+        text.text = "Setting up Firebase Auth";
     }
 
     /// <summary>
