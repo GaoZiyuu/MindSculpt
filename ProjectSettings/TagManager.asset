@@ -6,6 +6,8 @@ TagManager:
   tags:
   - heart
   - mood_stabiliser
+  - Negative
+  - Postive
   layers:
   - Default
   - TransparentFX
