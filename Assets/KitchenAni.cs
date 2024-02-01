@@ -6,14 +6,14 @@ public class KitchenAni : MonoBehaviour
 {
     public Animator rightAni;
     public Animator LeftAni;
-    public GameObject close;
+
+    public Animator Drawer;
 
 
     public void Open()
     {
         rightAni.SetBool("isOpen", true);
         LeftAni.SetBool("isOpen", true);
-        close.SetActive(true);
     }
 
     public void Close()
@@ -24,13 +24,11 @@ public class KitchenAni : MonoBehaviour
 
     public void DrawerOpen()
     {
-        rightAni.SetBool("DrawerOpen", true);
-        LeftAni.SetBool("DrawerOpen", true);
+        Drawer.SetBool("DrawerOpen", true);
     }
 
     public void DrawerClose()
     {
-        rightAni.SetBool("DrawerOpen", false);
-        LeftAni.SetBool("DrawerOpen", false);
+        Drawer.SetBool("DrawerOpen", false);
     }
 }
