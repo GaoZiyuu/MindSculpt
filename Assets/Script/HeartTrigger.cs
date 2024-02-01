@@ -15,17 +15,21 @@ public class HeartTrigger : MonoBehaviour
 
     public bool moodDone = false;
 
-    public GameObject chain1;
-    public GameObject chain2;
+    public Animator chain;
+    public Animator chain2;
+    public Animator chain3;
+    public Animator chain4;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "mood_stabiliser")
         {
             //play animation
+            chain.SetBool("move", true);
+            chain2.SetBool("move2", true);
+            chain3.SetBool("move3", true);
+            chain4.SetBool("move4", true);
 
-            chain1.SetActive(false);
-            chain2.SetActive(false);
             moodDone = true;
         }
 
