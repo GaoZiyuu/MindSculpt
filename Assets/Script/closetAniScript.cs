@@ -1,3 +1,8 @@
+/* 
+ * Author : Pang Le Xin
+ * Date: 01/02/2024
+ * Description: controls the animation for the closet door
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
