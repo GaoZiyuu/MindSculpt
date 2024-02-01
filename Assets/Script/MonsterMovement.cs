@@ -1,3 +1,8 @@
+/* 
+ * Author : Pang Le Xin
+ * Date: 01/02/2024
+ * Description: Movement and actions of the monster outside mika's room
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
