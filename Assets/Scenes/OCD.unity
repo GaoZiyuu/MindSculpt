@@ -207,6 +207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 492334721896184669, guid: 41e40cf6410f64f4eab22fb599ff474e,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492334721896184669, guid: 41e40cf6410f64f4eab22fb599ff474e,
+        type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -218,12 +223,12 @@ PrefabInstance:
     - target: {fileID: 4535806737950394403, guid: 41e40cf6410f64f4eab22fb599ff474e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 364.684
+      value: 364.681
       objectReference: {fileID: 0}
     - target: {fileID: 4535806737950394403, guid: 41e40cf6410f64f4eab22fb599ff474e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21525817
+      value: 0.089
       objectReference: {fileID: 0}
     - target: {fileID: 4535806737950394403, guid: 41e40cf6410f64f4eab22fb599ff474e,
         type: 3}
@@ -281,6 +286,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 18625831}
+    - targetCorrespondingSourceObject: {fileID: 3468970198798466778, guid: 41e40cf6410f64f4eab22fb599ff474e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 18625838}
   m_SourcePrefab: {fileID: 100100000, guid: 41e40cf6410f64f4eab22fb599ff474e, type: 3}
 --- !u!1 &18625830 stripped
 GameObject:
@@ -356,6 +365,27 @@ MonoBehaviour:
   _resetGrabOnGrabsUpdated: 1
   _physicsGrabbable: {fileID: 0}
   _movementProvider: {fileID: 0}
+--- !u!65 &18625838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18625830}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.49145508, y: 0.2, z: 0.64385986}
+  m_Center: {x: -0.02432251, y: 0.002510935, z: -0.008346558}
 --- !u!1001 &50083624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5078,7 +5108,7 @@ PrefabInstance:
     - target: {fileID: 3725316477406688920, guid: 1aab9f63ca232db47ac4c9681284608b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.202
+      value: 0.097
       objectReference: {fileID: 0}
     - target: {fileID: 3725316477406688920, guid: 1aab9f63ca232db47ac4c9681284608b,
         type: 3}
@@ -5120,6 +5150,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4575403040770975806, guid: 1aab9f63ca232db47ac4c9681284608b,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575403040770975806, guid: 1aab9f63ca232db47ac4c9681284608b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4840341853667227672, guid: 1aab9f63ca232db47ac4c9681284608b,
         type: 3}
       propertyPath: m_Name
@@ -5141,6 +5181,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 534656096}
+    - targetCorrespondingSourceObject: {fileID: 4840341853667227672, guid: 1aab9f63ca232db47ac4c9681284608b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 534656103}
   m_SourcePrefab: {fileID: 100100000, guid: 1aab9f63ca232db47ac4c9681284608b, type: 3}
 --- !u!1 &534656095 stripped
 GameObject:
@@ -5216,6 +5260,27 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+--- !u!65 &534656103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534656095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5726929, y: 0.24974361, z: 0.36139283}
+  m_Center: {x: 0.015716553, y: 0.013729632, z: -0.016706541}
 --- !u!1 &542382894
 GameObject:
   m_ObjectHideFlags: 0
@@ -14155,8 +14220,8 @@ AudioSource:
   SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 3
-  MaxDistance: 10
+  MinDistance: 5.322693
+  MaxDistance: 15
   Pan2D: 0.01
   rolloffMode: 0
   BypassEffects: 1
@@ -14982,18 +15047,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 102339358}
-        m_TargetAssemblyTypeName: MonsterMovement, Assembly-CSharp
-        m_MethodName: playScream
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &1617835822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15048,12 +15101,12 @@ PrefabInstance:
     - target: {fileID: 2442521818482847294, guid: 32c011a2bf17f89498ea0cebefdf8ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 364.002
+      value: 364.109
       objectReference: {fileID: 0}
     - target: {fileID: 2442521818482847294, guid: 32c011a2bf17f89498ea0cebefdf8ec4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.225
+      value: 0.047
       objectReference: {fileID: 0}
     - target: {fileID: 2442521818482847294, guid: 32c011a2bf17f89498ea0cebefdf8ec4,
         type: 3}
@@ -15102,6 +15155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6212145289184637486, guid: 32c011a2bf17f89498ea0cebefdf8ec4,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212145289184637486, guid: 32c011a2bf17f89498ea0cebefdf8ec4,
+        type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -15121,6 +15179,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1623083902}
+    - targetCorrespondingSourceObject: {fileID: 1094630590835231040, guid: 32c011a2bf17f89498ea0cebefdf8ec4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1623083905}
   m_SourcePrefab: {fileID: 100100000, guid: 32c011a2bf17f89498ea0cebefdf8ec4, type: 3}
 --- !u!1 &1623083901 stripped
 GameObject:
@@ -15192,10 +15254,31 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &1623083905
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623083901}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.52627563, y: 0.18858644, z: 0.4478302}
+  m_Center: {x: -0.004562378, y: -0.0076165944, z: 0.012611389}
 --- !u!1 &1631019837
 GameObject:
   m_ObjectHideFlags: 0
@@ -18144,7 +18227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1933972132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21467,6 +21550,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 102339358}
+        m_TargetAssemblyTypeName: MonsterMovement, Assembly-CSharp
+        m_MethodName: playScream
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26115,7 +26210,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2275569365002885970}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -26125,7 +26220,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7134933065210285446
 MonoBehaviour:
