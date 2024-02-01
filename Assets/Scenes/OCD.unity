@@ -384,7 +384,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.49145508, y: 0.2, z: 0.64385986}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.02432251, y: 0.002510935, z: -0.008346558}
 --- !u!1001 &50083624
 PrefabInstance:
@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: what the ....
+  m_text: What's that sound ....
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5279,7 +5279,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5726929, y: 0.24974361, z: 0.36139283}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.015716553, y: 0.013729632, z: -0.016706541}
 --- !u!1 &542382894
 GameObject:
@@ -14211,7 +14211,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ed42722a3d20ba14f9072cf05ba3d9aa, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -15277,7 +15277,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.52627563, y: 0.18858644, z: 0.4478302}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.004562378, y: -0.0076165944, z: 0.012611389}
 --- !u!1 &1631019837
 GameObject:

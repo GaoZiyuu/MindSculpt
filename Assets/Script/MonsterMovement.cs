@@ -46,8 +46,5 @@ public class MonsterMovement : MonoBehaviour
         monsterScream.Play();
     }
 
-    public void playSound()
-    {
-        monsterSound.Play();
-    }
+   
 }
