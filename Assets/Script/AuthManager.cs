@@ -281,7 +281,7 @@ public class AuthManager : MonoBehaviour
                         //UIManager.instance.LoginScreen();
                         warningRegisterText.text = ""; //reset warning text
                         registerLoginText.text = "Account Created and Logging In...";
-                        
+                        SceneManager.LoadScene(1);
 
                     }
                 }

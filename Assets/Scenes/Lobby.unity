@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1029,6 +1029,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: portal(bipolarDisorder)
       objectReference: {fileID: 0}
+    - target: {fileID: 3536453255116182041, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: BipolarDisorder
+      objectReference: {fileID: 0}
     - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1550,6 +1555,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 211986617}
+    - targetCorrespondingSourceObject: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 211986619}
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
 --- !u!1 &211986615 stripped
 GameObject:
@@ -1613,6 +1622,18 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &211986619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211986615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa741428f81cbb4e921169e1f9744ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &243904757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9071,6 +9092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: portal(Schizophrenia)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536453255116182041, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Schizophrenia
       objectReference: {fileID: 0}
     - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
         type: 3}
@@ -29244,6 +29270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: portal(EatingDisorder)
       objectReference: {fileID: 0}
+    - target: {fileID: 3536453255116182041, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: EatingDisorder
+      objectReference: {fileID: 0}
     - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29400,6 +29431,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: portal(OCD)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536453255116182041, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: OCD
       objectReference: {fileID: 0}
     - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
         type: 3}

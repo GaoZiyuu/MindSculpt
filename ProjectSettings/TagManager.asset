@@ -8,6 +8,10 @@ TagManager:
   - mood_stabiliser
   - Negative
   - Postive
+  - OCD
+  - EatingDisorder
+  - Schizophrenia
+  - BipolarDisorder
   layers:
   - Default
   - TransparentFX
