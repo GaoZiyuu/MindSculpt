@@ -12,7 +12,7 @@ public class MonsterMovement : MonoBehaviour
     public Transform[] waypoints;
     public float moveSpeed = 3f;  // Speed of the monster
     private int currentWaypointIndex = 0;
-    public AudioSource monstersound;
+    public AudioSource monsterSound;
     public AudioSource monsterScream;
 
 
@@ -39,5 +39,15 @@ public class MonsterMovement : MonoBehaviour
             // Move to the next waypoint using a for loop and wrap around
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
         }
+    }
+
+    public void playScream()
+    {
+        monsterScream.Play();
+    }
+
+    public void playSound()
+    {
+        monsterSound.Play();
     }
 }
