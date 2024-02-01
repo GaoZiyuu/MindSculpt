@@ -1,7 +1,7 @@
 /* 
- * Author : Leong Yen Zhen
- * Date: 28/01/2024
- * Description: Auth Manager for register and login and sending it to firebase
+ * Author : Gao Ziyu
+ * Date: ??
+ * Description: ?
  */
 
 

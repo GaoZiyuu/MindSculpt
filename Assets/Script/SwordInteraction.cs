@@ -7,35 +7,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class SwordInteraction : MonoBehaviour
 {
     public GameObject correctUI;
     public GameObject wrongUI;
     public GameObject Done;
+    public GameObject Sword;
     public int destroyed;
+    //public TMP_Text test;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Negative")
         {
             destroyed += 1;
-
+            //test.text = "1";
             if (other.gameObject.tag == "Negative" && destroyed < 10)
             {
                 Destroy(other.gameObject);
+                correctUI.SetActive(true);
+                StartCoroutine(WaitCoroutine());
 
             }
 
             if (other.gameObject.tag == "Negative" && destroyed == 10)
             {
                 Destroy(other.gameObject);
+                Done.SetActive(true);
+                Destroy(Sword);
 
             }
 
-            correctUI.SetActive(true);
-            StartCoroutine(WaitCoroutine());
-            correctUI.SetActive(false);
+            
+            
         }
 
         else if (other.gameObject.tag == "Postive")
@@ -51,7 +58,8 @@ public class SwordInteraction : MonoBehaviour
     {
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
+        correctUI.SetActive(false);
 
     }
 }
