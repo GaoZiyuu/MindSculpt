@@ -21,4 +21,16 @@ public class KitchenAni : MonoBehaviour
         rightAni.SetBool("isOpen", false);
         LeftAni.SetBool("isOpen", false);
     }
+
+    public void DrawerOpen()
+    {
+        rightAni.SetBool("DrawerOpen", true);
+        LeftAni.SetBool("DrawerOpen", true);
+    }
+
+    public void DrawerClose()
+    {
+        rightAni.SetBool("DrawerOpen", false);
+        LeftAni.SetBool("DrawerOpen", false);
+    }
 }
