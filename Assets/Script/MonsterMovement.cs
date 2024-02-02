@@ -41,7 +41,7 @@ public class MonsterMovement : MonoBehaviour
 
         if (timeValue == 0)
         {
-            restartScene();
+            StartCoroutine(restartScene() );
         }
     }
 
@@ -88,6 +88,7 @@ public class MonsterMovement : MonoBehaviour
 
     private IEnumerator restartScene()
     {
+        playScream();
         yield return new WaitForSeconds(3f);
         //loadScene
         yield return null;
