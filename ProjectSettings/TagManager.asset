@@ -12,6 +12,11 @@ TagManager:
   - EatingDisorder
   - Schizophrenia
   - BipolarDisorder
+  - Drawer2
+  - Drawer3
+  - Drawer1
+  - Cabinet
+  - Fridge
   layers:
   - Default
   - TransparentFX
