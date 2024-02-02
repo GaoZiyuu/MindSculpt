@@ -27,7 +27,7 @@ public class SchizoLightFlicker : MonoBehaviour
     void FlickerLight()
     {
         if (Timer > 0)
-            Timer -= Timer.deltaTime;
+            Timer -= Time.deltaTime;
         if(Timer<-0)
         {
             _Light.enabled = !_Light.enabled;

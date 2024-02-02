@@ -8355,13 +8355,13 @@ MonoBehaviour:
   m_text: 'Lara seems understanding. Have you considered discussing these concerns
     with her? It might be a step toward rebuilding your friendship.
 
-    
 
-    
 
-    
 
-    
+
+
+
+
 
 '
   m_isRightToLeft: 0
@@ -17425,7 +17425,7 @@ MonoBehaviour:
   m_IsGlobal: 0
   priority: 0
   blendDistance: 0
-  weight: 0.1
+  weight: 0.2
   sharedProfile: {fileID: 11400000, guid: 70000a2a341cef740891c45bebb9244c, type: 2}
 --- !u!4 &905050155
 Transform:
@@ -20071,13 +20071,13 @@ MonoBehaviour:
   m_text: 'I appreciate your openness. Let''s work together to explore strategies
     that can help you navigate these moments and find relief.
 
-    
 
-    
 
-    
 
-    
+
+
+
+
 
 '
   m_isRightToLeft: 0
@@ -21522,11 +21522,11 @@ MonoBehaviour:
     explore ways to communicate with Lara and find a path that feels comfortable
     for you.
 
-    
 
-    
 
-    
+
+
+
 
 '
   m_isRightToLeft: 0
@@ -26055,11 +26055,11 @@ MonoBehaviour:
     despite the compulsions. How do you feel about the idea of rebuilding your friendship
     with Lara?
 
-    
 
-    
 
-    
+
+
+
 
 '
   m_isRightToLeft: 0
@@ -34924,7 +34924,7 @@ MonoBehaviour:
   m_text: 'I miss our moments together, but the fear of my compulsions getting in
     the way holds me back.
 
-    
+
 
 
 '
