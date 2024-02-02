@@ -12,6 +12,14 @@ TagManager:
   - EatingDisorder
   - Schizophrenia
   - BipolarDisorder
+  - happy_frame
+  - sad_frame
+  - angry_frame
+  - scared_frame
+  - happy_mask
+  - sad_mask
+  - angry_mask
+  - scared_mask
   layers:
   - Default
   - TransparentFX

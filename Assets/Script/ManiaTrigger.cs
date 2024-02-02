@@ -5,7 +5,6 @@ using UnityEngine;
 public class ManiaTrigger : MonoBehaviour
 {
     public Transform tp_to_mania;
-    public bool mania = true;
 
     private void OnTriggerEnter(Collider other)
     {
