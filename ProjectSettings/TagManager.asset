@@ -21,6 +21,10 @@ TagManager:
   - BurgerT
   - RedT
   - GreenT
+  - Red
+  - Green
+  - Burger
+  - Egg
   layers:
   - Default
   - TransparentFX
