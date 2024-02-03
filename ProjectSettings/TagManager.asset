@@ -12,14 +12,29 @@ TagManager:
   - EatingDisorder
   - Schizophrenia
   - BipolarDisorder
-  - happy_frame
-  - sad_frame
-  - angry_frame
-  - scared_frame
-  - happy_mask
-  - sad_mask
+  - Drawer2
+  - Drawer3
+  - Drawer1
+  - Cabinet
+  - Fridge
+  - EggT
+  - BurgerT
+  - RedT
+  - GreenT
+  - Red
+  - Green
+  - Burger
+  - Egg
   - angry_mask
+  - sad_mask
+  - happy_frame
   - scared_mask
+  - happy_mask
+  - sad_frame
+  - scared_frame
+  - angry_frame
+  - puzzleGrab
+  - bipolarKey
   layers:
   - Default
   - TransparentFX
