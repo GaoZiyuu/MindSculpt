@@ -114,15 +114,12 @@ public class MonsterMovement : MonoBehaviour
         lightSpoilSound.Play();
         lightSource.SetActive(false);
         ceilingLightObj.SetActive(false);
-    }
-
-    public void MonsterAngry()
-    {
         StartCoroutine(monsterComingIn());
     }
+
     private IEnumerator monsterComingIn()
     {
-        yield return new WaitForEndOfFrame(); 
+        yield return new WaitForSeconds(10f); 
         runningMonsterSound.Play();
         yield return new WaitForSeconds(5f);
         monsterScream.Play();
