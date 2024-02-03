@@ -17,6 +17,10 @@ TagManager:
   - Drawer1
   - Cabinet
   - Fridge
+  - EggT
+  - BurgerT
+  - RedT
+  - GreenT
   layers:
   - Default
   - TransparentFX

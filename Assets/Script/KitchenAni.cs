@@ -1,3 +1,9 @@
+/* 
+ * Author : Leong Yen Zhen
+ * Date: 01/02/2024
+ * Description: Script for activating the animation for the cabinets in the kitchen
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
