@@ -34,20 +34,21 @@ public class KeyLockInteraction : MonoBehaviour
 
             animatedKey.SetActive(true);
             //play animation
+            animatedKey.GetComponent<Animator>().SetBool("keyAnim", true);
 
             yield return new WaitForSeconds(1f);
 
             //play lock animation
-
-            doorUnlocked = true;
-
-
-            //play door animation
+            lockObj.GetComponent<Animator>().SetBool("lockUnlocked", true);
 
             yield return new WaitForSeconds(2f);
             HideKeys();
 
-            if(portalVFX != null)
+            doorUnlocked = true;
+            //play door animation
+            doorObj.GetComponent<Animator>().SetBool("unlockedDoor", true);
+
+            if (portalVFX != null)
             {
                 portalVFX.SetActive(true);
             }
