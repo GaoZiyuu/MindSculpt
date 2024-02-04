@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Lobby.unity
     guid: 28c77e324ba3e4bea96ef26867d6f8e0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/EatingDisorder.unity
     guid: 2c47beaa19f434eca9cea31f09bc591a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OCD.unity
     guid: 2e56cbfa062d048e693025fa03fab6f2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Schizophrenia.unity
     guid: 903b358fcb93f4d959ac134cd2563a57
   - enabled: 0

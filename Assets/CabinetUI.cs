@@ -1,21 +1,15 @@
-/* 
- * Author : Leong Yen Zhen
- * Date: 01/02/2024
- * Description: Script for activating the animation for the cabinets in the kitchen
- */
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationUI : MonoBehaviour
+public class CabinetUI : MonoBehaviour
 {
     public GameObject Drawer1Animation;
     public GameObject Drawer2Animation;
     public GameObject Drawer3Animation;
     public GameObject CabinetAnimation;
     public GameObject Fridge;
-    
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -77,3 +71,4 @@ public class AnimationUI : MonoBehaviour
 
 
 }
+
