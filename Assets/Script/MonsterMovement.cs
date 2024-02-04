@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MonsterMovement : MonoBehaviour
 {
@@ -89,12 +90,16 @@ public class MonsterMovement : MonoBehaviour
     private IEnumerator restartScene()
     {
         playScream();
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
         yield return new WaitForSeconds(3f);
-        //loadScene
+        SceneManager.LoadScene(currentScene);
         yield return null;
     }
     public void startLoadScene()
     {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        currentScene++;
+        SceneManager.LoadScene(currentScene);
         Debug.Log("next Scene loading");
         //load scene
     }
