@@ -14,7 +14,7 @@ using UnityEngine.SceneManagement;
 public class MonsterMovement : MonoBehaviour
 {
     public Transform[] waypoints;
-    public float moveSpeed = 3f;  // Speed of the monster
+    public float moveSpeed = 1f;  // Speed of the monster
     private int currentWaypointIndex = 0;
     public AudioSource monsterSound;
     public AudioSource monsterScream;
@@ -81,7 +81,7 @@ public class MonsterMovement : MonoBehaviour
         {
             // Code is incorrect, display an error message
             Debug.Log("Incorrect code!");
-            playScream();
+            monsterScream.Play();
             errorMsgTxt.text = "Incorrect code. Please try again.";
             //StartCoroutine(restartScene());
         }
