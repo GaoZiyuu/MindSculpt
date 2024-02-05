@@ -35,6 +35,7 @@ TagManager:
   - angry_frame
   - puzzleGrab
   - bipolarKey
+  - BGM
   layers:
   - Default
   - TransparentFX
