@@ -5,11 +5,10 @@ using UnityEngine;
 public class ManiaTrigger : MonoBehaviour
 {
     public Transform tp_to_mania;
-    public bool mania = true;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
             TeleportToMania(other.transform);
         }

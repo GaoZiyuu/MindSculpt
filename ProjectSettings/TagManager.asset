@@ -25,6 +25,16 @@ TagManager:
   - Green
   - Burger
   - Egg
+  - angry_mask
+  - sad_mask
+  - happy_frame
+  - scared_mask
+  - happy_mask
+  - sad_frame
+  - scared_frame
+  - angry_frame
+  - puzzleGrab
+  - bipolarKey
   layers:
   - Default
   - TransparentFX
