@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MaskManager : MonoBehaviour
 {
+    public AudioSource maskPlaced;
+
     public GameObject happyMask;
     public GameObject sadMask;
     public GameObject angryMask;
@@ -17,6 +19,8 @@ public class MaskManager : MonoBehaviour
     public GameObject puzzlePieceObject;
     public CameraShake cameraShake;
 
+    private bool maskIncorrect = false;
+
     private void Start()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
@@ -26,10 +30,17 @@ public class MaskManager : MonoBehaviour
     {
         if (CheckMaskPlacement())
         {
+            if (maskIncorrect)
+            {
+                PlayMaskPlacedAudio();
+                maskIncorrect = false;
+            }
+
             ActivatePuzzlePiece();
         }
         else
         {
+            maskIncorrect = true;
             StartCoroutine(ShakeCamera(2f));
         }
     }
@@ -40,6 +51,14 @@ public class MaskManager : MonoBehaviour
                 sadMask.transform.parent == sadFrame.transform &&
                 angryMask.transform.parent == angryFrame.transform &&
                 scaredMask.transform.parent == scaredFrame.transform);
+    }
+
+    private void PlayMaskPlacedAudio()
+    {
+        if (maskPlaced != null)
+        {
+            maskPlaced.Play();
+        }
     }
 
     private void ActivatePuzzlePiece()
