@@ -11,15 +11,12 @@ public class EatingDisorderAudio : MonoBehaviour
     {
         //Plays an Audio Source
         voicesSound.Play();
-    }
+    }   
     public void Heartbeat()
     {
         //Plays an Audio Source
         HeartbeatSound.Play();
     }
-    public void bgm()
-    {
-        //Plays an Audio Source
-        bgmSound.Play();
-    }
+
+    
 }
