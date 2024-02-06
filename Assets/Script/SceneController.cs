@@ -32,5 +32,13 @@ public class SceneController : MonoBehaviour
             SceneManager.LoadScene("BipolarDisorder");
 
         }
+
+        else if (other.gameObject.tag == "End")
+        {
+            SceneManager.LoadScene("Clinic-End");
+
+        }
+
+        
     }
 }
