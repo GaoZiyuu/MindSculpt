@@ -46,7 +46,7 @@ Material:
     - _VoronoiSpeed: 11.56
     - _erosion: -0.55
     m_Colors:
-    - _RippleColour: {r: 0, g: 0.8166584, b: 0.19599801, a: 0}
+    - _RippleColour: {r: 0, g: 1.6333168, b: 0.39199603, a: 0}
     - _RippleSpeed: {r: 0, g: 25, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2819194766426778457

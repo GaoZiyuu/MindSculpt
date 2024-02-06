@@ -7,6 +7,7 @@ public class EatingDisorderTrigger : MonoBehaviour
 
     public AudioSource voicesSound;
     public AudioSource bgmSound;
+    public GameObject GV;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,8 @@ public class EatingDisorderTrigger : MonoBehaviour
 
             //Stops an Audio Source
             voicesSound.Stop();
+
+            GV.SetActive(false);
         }
 
     }
