@@ -115,7 +115,6 @@ public class MonsterMovement : MonoBehaviour
 
    public void playLightSpoilSound()
     {
-        monsterSound.Stop();
         lightSpoilSound.Play();
         lightSource.SetActive(false);
         ceilingLightObj.SetActive(false);
@@ -125,6 +124,8 @@ public class MonsterMovement : MonoBehaviour
     private IEnumerator monsterComingIn()
     {
         monsterIsBreakingIn = true;
+        yield return new WaitForEndOfFrame();
+        monsterSound.Stop();
         yield return new WaitForSeconds(3f); 
         runningMonsterSound.Play();
         yield return new WaitForSeconds(5f);
