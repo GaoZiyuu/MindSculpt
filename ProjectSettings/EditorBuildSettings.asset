@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BipolarDisorder.unity
     guid: a01c3ead9a61c4e66bcc8907034c5273
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Clinic-End.unity
     guid: 1b6ee298029f544d2a86d7cd5f692326
   m_configObjects:
