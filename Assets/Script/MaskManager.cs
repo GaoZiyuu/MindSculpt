@@ -16,8 +16,13 @@ public class MaskManager : MonoBehaviour
     public GameObject angryFrame;
     public GameObject scaredFrame;
 
+    public GameObject happyMaskHid;
+    public GameObject sadMaskHid;
+    public GameObject angryMaskHid;
+    public GameObject scaredMaskHid;
+
     public GameObject puzzlePieceObject;
-    //public CameraShake cameraShake;
+    // public CameraShake cameraShake;
 
     private bool maskIncorrect = false;
 
@@ -26,31 +31,55 @@ public class MaskManager : MonoBehaviour
         //cameraShake = Camera.main.GetComponent<CameraShake>();
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (CheckMaskPlacement())
+        if (other.CompareTag("Mask"))
         {
-            if (maskIncorrect)
-            {
-                PlayMaskPlacedAudio();
-                maskIncorrect = false;
-            }
+            GameObject mask = other.gameObject;
 
+            if (mask == happyMask)
+                TryPlaceHappyMaskInFrame(mask, happyFrame, happyMaskHid);
+            else if (mask == sadMask)
+                TryPlaceMaskInFrame(mask, sadFrame, sadMaskHid);
+            else if (mask == angryMask)
+                TryPlaceMaskInFrame(mask, angryFrame, angryMaskHid);
+            else if (mask == scaredMask)
+                TryPlaceMaskInFrame(mask, scaredFrame, scaredMaskHid);
+        }
+    }
+
+    private void TryPlaceHappyMaskInFrame(GameObject mask, GameObject frame, GameObject hidMask)
+    {
+        if (mask.transform.parent == null && Vector3.Distance(mask.transform.position, frame.transform.position) < 1f && frame.CompareTag("HappyFrame"))
+        {
+            mask.transform.parent = frame.transform;
+            PlayMaskPlacedAudio();
+            UnhideMaskInFrame(hidMask);
             ActivatePuzzlePiece();
         }
         else
         {
+            // Perform actions for incorrect placement (e.g., camera shake)
             maskIncorrect = true;
             StartCoroutine(ShakeCamera(2f));
         }
     }
 
-    private bool CheckMaskPlacement()
+    private void TryPlaceMaskInFrame(GameObject mask, GameObject frame, GameObject hidMask)
     {
-        return (happyMask.transform.parent == happyFrame.transform &&
-                sadMask.transform.parent == sadFrame.transform &&
-                angryMask.transform.parent == angryFrame.transform &&
-                scaredMask.transform.parent == scaredFrame.transform);
+        if (mask.transform.parent == null && Vector3.Distance(mask.transform.position, frame.transform.position) < 1f && frame.CompareTag("FrameTag"))
+        {
+            mask.transform.parent = frame.transform;
+            PlayMaskPlacedAudio();
+            // Do not unhide the mask for other types
+            ActivatePuzzlePiece();
+        }
+        else
+        {
+            // Perform actions for incorrect placement (e.g., camera shake)
+            maskIncorrect = true;
+            StartCoroutine(ShakeCamera(2f));
+        }
     }
 
     private void PlayMaskPlacedAudio()
@@ -66,7 +95,12 @@ public class MaskManager : MonoBehaviour
         puzzlePieceObject.SetActive(true);
     }
 
-    private System.Collections.IEnumerator ShakeCamera(float duration)
+    private void UnhideMaskInFrame(GameObject hidMask)
+    {
+        hidMask.SetActive(true);
+    }
+
+    private IEnumerator ShakeCamera(float duration)
     {
         //cameraShake.StartShake(duration);
         yield return new WaitForSeconds(duration);
