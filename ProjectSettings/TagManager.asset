@@ -38,6 +38,8 @@ TagManager:
   - mania
   - calm
   - depressive
+  - BGM
+  - ToLobby
   layers:
   - Default
   - TransparentFX

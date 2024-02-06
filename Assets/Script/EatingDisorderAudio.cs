@@ -6,7 +6,8 @@ public class EatingDisorderAudio : MonoBehaviour
 {
     public AudioSource voicesSound;
     public AudioSource HeartbeatSound;
-    public AudioSource bgmSound;
+    public AudioSource vomitSound;
+
     public void Voices()
     {
         //Plays an Audio Source
@@ -18,5 +19,9 @@ public class EatingDisorderAudio : MonoBehaviour
         HeartbeatSound.Play();
     }
 
+    public void Vomit()
+    {
+        vomitSound.Play();  
+    }
     
 }
