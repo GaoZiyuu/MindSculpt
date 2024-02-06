@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.43402156, g: 0.5188679, b: 0.4364416, a: 1}
+    m_Value: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
   center:
     m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 0.22
+    m_Value: 0.4
   clamp:
     m_OverrideState: 1
     m_Value: 0.071
@@ -93,10 +93,10 @@ MonoBehaviour:
     m_Value: 3
   intensity:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0.05
   response:
     m_OverrideState: 1
-    m_Value: 0.68
+    m_Value: 0.76
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.47
+    m_Value: 0.43
 --- !u!114 &-3647129436485874510
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -131,7 +131,7 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: -0.56
+    m_Value: 0.79
   contrast:
     m_OverrideState: 1
     m_Value: 0
@@ -162,10 +162,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.9
+    m_Value: 1.05
   intensity:
     m_OverrideState: 1
-    m_Value: 34.7
+    m_Value: 36.12
   scatter:
     m_OverrideState: 1
     m_Value: 1
@@ -270,13 +270,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9962235, z: 0.84931886, w: 0}
+    m_Value: {x: 0.96306974, y: 1, z: 0.92872316, w: 0}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 0.90560603, y: 1, z: 0.9543599, w: 0}
+    m_Value: {x: 0.9272132, y: 1, z: 0.9111628, w: 0}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.82002705, y: 1, z: 0.80346584, w: 0}
+    m_Value: {x: 0.94147056, y: 1, z: 0.92531586, w: 0}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -304,10 +304,10 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: -0.6
+    m_Value: -0.06
   xMultiplier:
     m_OverrideState: 1
-    m_Value: 0.286
+    m_Value: 0.42
   yMultiplier:
     m_OverrideState: 1
     m_Value: 0.521
