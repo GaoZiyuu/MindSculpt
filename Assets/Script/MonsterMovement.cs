@@ -97,9 +97,8 @@ public class MonsterMovement : MonoBehaviour
     }
     public void startLoadScene()
     {
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
-        currentScene++;
-        SceneManager.LoadScene(currentScene);
+        
+        SceneManager.LoadScene(1);
         Debug.Log("next Scene loading");
         //load scene
     }
@@ -126,8 +125,9 @@ public class MonsterMovement : MonoBehaviour
         monsterSound.Stop();
         yield return new WaitForEndOfFrame();
         lightSpoilSound.Play();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForEndOfFrame();
         ceilingLightObj.SetActive(false);
+        yield return new WaitForSeconds(3f);
         runningMonsterSound.Play();
         yield return new WaitForSeconds(5f);
         monsterScream.Play();
