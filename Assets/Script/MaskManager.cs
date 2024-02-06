@@ -17,13 +17,13 @@ public class MaskManager : MonoBehaviour
     public GameObject scaredFrame;
 
     public GameObject puzzlePieceObject;
-    public CameraShake cameraShake;
+    //public CameraShake cameraShake;
 
     private bool maskIncorrect = false;
 
     private void Start()
     {
-        cameraShake = Camera.main.GetComponent<CameraShake>();
+        //cameraShake = Camera.main.GetComponent<CameraShake>();
     }
 
     private void Update()
@@ -68,8 +68,8 @@ public class MaskManager : MonoBehaviour
 
     private System.Collections.IEnumerator ShakeCamera(float duration)
     {
-        cameraShake.StartShake(duration);
+        //cameraShake.StartShake(duration);
         yield return new WaitForSeconds(duration);
-        cameraShake.StopShake();
+        //cameraShake.StopShake();
     }
 }
