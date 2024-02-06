@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17756861, g: 0.039926056, b: 0.002464266, a: 1}
+  m_IndirectSpecularColor: {r: 0.3406356, g: 0.39948517, b: 0.49837476, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6103,6 +6103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: portal(EatingDisorder)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385995535319481961, guid: 86a8f2bb2b706e2438c9cab95eccb6fa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9163376285895550163, guid: 86a8f2bb2b706e2438c9cab95eccb6fa,
         type: 3}
@@ -55108,7 +55113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1661561250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58002,7 +58007,7 @@ GameObject:
   - component: {fileID: 1756562927}
   m_Layer: 0
   m_Name: EatingDisorderTP
-  m_TagString: Untagged
+  m_TagString: ToLobby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
