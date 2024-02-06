@@ -6,6 +6,7 @@ public class SadFrameTrigger : MonoBehaviour
 {
     public bool sadCorrect = false;
     public GameObject sadMaskHid;
+    public GameObject sadMaskGrab;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class SadFrameTrigger : MonoBehaviour
         {
             sadMaskHid.SetActive(true);
             sadCorrect = true;
+            Destroy(sadMaskGrab);
         }
         else
         {

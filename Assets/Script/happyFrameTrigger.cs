@@ -6,6 +6,7 @@ public class happy : MonoBehaviour
 {
     public bool happyCorrect = false;
     public GameObject happyMaskHid;
+    public GameObject happyMaskGrab;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class happy : MonoBehaviour
         {
             happyMaskHid.SetActive(true);
             happyCorrect = true;
+            Destroy(happyMaskGrab);
         }
         else
         {

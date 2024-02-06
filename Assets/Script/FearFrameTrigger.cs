@@ -6,6 +6,7 @@ public class FearFrameTrigger : MonoBehaviour
 {
     public bool fearCorrect = false;
     public GameObject fearMaskHid;
+    public GameObject fearMaskGrab;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class FearFrameTrigger : MonoBehaviour
         {
             fearMaskHid.SetActive(true);
             fearCorrect = true;
+            Destroy(fearMaskGrab);
         }
         else
         {

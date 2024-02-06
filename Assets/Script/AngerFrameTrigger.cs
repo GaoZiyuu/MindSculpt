@@ -6,6 +6,7 @@ public class AngerFrameTrigger : MonoBehaviour
 {
     public bool angerCorrect = false;
     public GameObject angerMaskHid;
+    public GameObject angerMaskGrab;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class AngerFrameTrigger : MonoBehaviour
         {
             angerMaskHid.SetActive(true);
             angerCorrect = true;
+            Destroy(angerMaskGrab);
         }
         else
         {
