@@ -82,16 +82,16 @@ public class MonsterMovement : MonoBehaviour
             // Code is incorrect, display an error message
             Debug.Log("Incorrect code!");
             monsterScream.Play();
-            errorMsgTxt.text = "Incorrect code. Please try again.";
+            errorMsgTxt.text = "Incorrect code. Try again.";
             //StartCoroutine(restartScene());
         }
     }
 
     private IEnumerator restartScene()
     {
-        playScream();
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        monsterScream.Play();
         yield return new WaitForSeconds(3f);
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
         yield return null;
     }
@@ -124,13 +124,14 @@ public class MonsterMovement : MonoBehaviour
 
     private IEnumerator monsterComingIn()
     {
-        yield return new WaitForSeconds(10f); 
+        monsterIsBreakingIn = true;
+        yield return new WaitForSeconds(3f); 
         runningMonsterSound.Play();
         yield return new WaitForSeconds(5f);
         monsterScream.Play();
         yield return new WaitForSeconds(2f);
         doorBangingSound.Play();
-        monsterIsBreakingIn = true;
+        
         yield return null;
     }
 
