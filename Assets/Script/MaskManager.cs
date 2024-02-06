@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class MaskManager : MonoBehaviour
@@ -29,10 +30,13 @@ public class MaskManager : MonoBehaviour
 
     private bool AreAllBoolsTrue()
     {
-        // Check if all four boolean variables are true
-        return happy != null && sad != null &&
-        fear != null && angry != null &&
-        happy.happyCorrect && sad.sadCorrect &&
-               fear.fearCorrect && angry.angerCorrect;
+        if (happy && sad && fear && angry)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
