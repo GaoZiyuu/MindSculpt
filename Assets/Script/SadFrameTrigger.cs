@@ -14,9 +14,10 @@ public class SadFrameTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "sad_mask")
         {
-            sadMaskHid.SetActive(true);
-            Destroy(sadMaskGrab);
             sadCorrect = true;
+            Destroy(sadMaskGrab);
+            sadMaskHid.SetActive(true);
+            wrongUI.SetActive(false);
         }
         else if(other.gameObject.tag != "sad_mask")
         {

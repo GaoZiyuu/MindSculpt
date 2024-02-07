@@ -13,13 +13,16 @@ public class FearFrameTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "scared_mask")
         {
-            fearMaskHid.SetActive(true);
-            Destroy(fearMaskGrab);
             fearCorrect = true;
+            Destroy(fearMaskGrab);
+            fearMaskHid.SetActive(true);
+            wrongUI.SetActive(false);
+
         }
         else if (other.gameObject.tag != "scared_mask")
         {
             fearCorrect = false;
+            wrongUI.SetActive(true);
             StartCoroutine(DeactivateAfterDelay(2f));
         }
     }

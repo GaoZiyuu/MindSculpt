@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class happy : MonoBehaviour
+public class happyFrameTrigger : MonoBehaviour
 {
     public bool happyCorrect = false;
     public GameObject happyMaskHid;
@@ -13,9 +13,10 @@ public class happy : MonoBehaviour
     {
         if(other.gameObject.tag == "happy_mask")
         {
-            happyMaskHid.SetActive(true);
-            Destroy(happyMaskGrab);
             happyCorrect = true;
+            Destroy(happyMaskGrab);
+            wrongUI.SetActive(false);
+            happyMaskHid.SetActive(true);
         }
         else if (other.gameObject.tag != "happy_mask")
         {
