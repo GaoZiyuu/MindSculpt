@@ -97,8 +97,8 @@ public class MonsterMovement : MonoBehaviour
     }
     public void startLoadScene()
     {
-        
-        SceneManager.LoadScene(1);
+
+        SceneManager.LoadScene("Lobby");
         Debug.Log("next Scene loading");
         //load scene
     }
