@@ -727,7 +727,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de4915f38d6e11a4c8e177d0011181a7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.474
+  m_Volume: 0.608
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3464,79 +3464,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!1001 &338428271
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3536453255116182041, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_Name
-      value: portal(Schizophrenia)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3536453255116182041, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_TagString
-      value: Schizophrenia
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99240917
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.12297966
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 14.128
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206311282116724899, guid: 7773f1b718ffd4c7ab92ddfc828bce3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7773f1b718ffd4c7ab92ddfc828bce3c, type: 3}
 --- !u!1 &342607892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,7 +3732,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 123afd7a10ab48742acce80b218188f4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.562
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12968,7 +12895,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 123afd7a10ab48742acce80b218188f4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.73
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -14662,7 +14589,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de4915f38d6e11a4c8e177d0011181a7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.397
+  m_Volume: 0.67
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -21108,7 +21035,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5e667050f1aeff74c9ad412995d86d72, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.676
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -32338,6 +32265,5 @@ SceneRoots:
   - {fileID: 161260809}
   - {fileID: 1920403907}
   - {fileID: 881521152}
-  - {fileID: 338428271}
   - {fileID: 1823164889}
   - {fileID: 2136077619}
