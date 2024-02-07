@@ -19,7 +19,7 @@ public class FearFrameTrigger : MonoBehaviour
             wrongUI.SetActive(false);
 
         }
-        else if (other.gameObject.tag != "scared_mask")
+        else if (other.gameObject.tag != "scared_mask" && fearCorrect == false)
         {
             fearCorrect = false;
             wrongUI.SetActive(true);

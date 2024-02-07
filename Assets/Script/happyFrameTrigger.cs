@@ -11,7 +11,7 @@ public class happyFrameTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "happy_mask")
+        if (other.gameObject.tag == "happy_mask")
         {
             happyCorrect = true;
             Destroy(happyMaskGrab);
