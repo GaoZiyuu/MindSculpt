@@ -18,7 +18,7 @@ public class happyFrameTrigger : MonoBehaviour
             wrongUI.SetActive(false);
             happyMaskHid.SetActive(true);
         }
-        else if (other.gameObject.tag != "happy_mask" && happyCorrect != false)
+        else if (other.gameObject.tag != "happy_mask" && happyCorrect == false)
         {
             happyCorrect = false;
             wrongUI.SetActive(true);
