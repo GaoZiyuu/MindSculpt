@@ -13,6 +13,8 @@ public class HeartTrigger : MonoBehaviour
 {
     public Transform tp_point;
 
+    public GameObject mood_stabiliser;
+
     public bool moodDone = false;
 
     public Animator chain;
@@ -29,6 +31,8 @@ public class HeartTrigger : MonoBehaviour
             chain2.SetBool("move2", true);
             chain3.SetBool("move3", true);
             chain4.SetBool("move4", true);
+
+            Destroy(mood_stabiliser);
 
             moodDone = true;
         }

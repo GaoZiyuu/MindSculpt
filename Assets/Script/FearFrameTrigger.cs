@@ -7,30 +7,28 @@ public class FearFrameTrigger : MonoBehaviour
     public bool fearCorrect = false;
     public GameObject fearMaskHid;
     public GameObject fearMaskGrab;
+    public GameObject wrongUI;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "scared_mask")
         {
             fearMaskHid.SetActive(true);
-            fearCorrect = true;
             Destroy(fearMaskGrab);
+            fearCorrect = true;
         }
         else
         {
             fearCorrect = false;
-            StartCoroutine(ShakeCamera(2f));
+            StartCoroutine(DeactivateAfterDelay(2f));
         }
     }
 
-    private IEnumerator ShakeCamera(float duration)
+    private IEnumerator DeactivateAfterDelay(float delay)
     {
-        // Logic for camera shake...
-        Debug.Log("Camera shake triggered!");
+        yield return new WaitForSeconds(delay);
 
-        yield return new WaitForSeconds(duration);
-
-        // Stop or reset camera shake, if applicable...
-        Debug.Log("Camera shake stopped!");
+        // Deactivate the ui after the delay
+        wrongUI.SetActive(false);
     }
 }
