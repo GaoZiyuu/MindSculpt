@@ -28,7 +28,7 @@ public class MaskManager : MonoBehaviour
 
     private bool AreAllBoolsTrue()
     {
-        if (happy && sad && fear && angry)
+        if (happy.happyCorrect && sad.sadCorrect && fear.fearCorrect && angry.angerCorrect)
         {
             return true;
         }
