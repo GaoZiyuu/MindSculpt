@@ -17,7 +17,7 @@ public class FearFrameTrigger : MonoBehaviour
             Destroy(fearMaskGrab);
             fearCorrect = true;
         }
-        else
+        else if (other.gameObject.tag != "scared_mask")
         {
             fearCorrect = false;
             StartCoroutine(DeactivateAfterDelay(2f));

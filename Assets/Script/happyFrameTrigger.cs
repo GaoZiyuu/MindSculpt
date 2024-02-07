@@ -17,7 +17,7 @@ public class happy : MonoBehaviour
             Destroy(happyMaskGrab);
             happyCorrect = true;
         }
-        else
+        else if (other.gameObject.tag != "happy_mask")
         {
             happyCorrect = false;
             wrongUI.SetActive(true);
