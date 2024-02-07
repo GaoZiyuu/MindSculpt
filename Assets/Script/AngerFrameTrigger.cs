@@ -17,7 +17,7 @@ public class AngerFrameTrigger : MonoBehaviour
             Destroy(angerMaskGrab);
             angerCorrect = true;
         }
-        else
+        else if (other.gameObject.tag != "angry_mask")
         {
             angerCorrect = false;
             StartCoroutine(DeactivateAfterDelay(2f));
