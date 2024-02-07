@@ -19496,10 +19496,10 @@ GameObject:
   - component: {fileID: 1406474920}
   - component: {fileID: 1406474923}
   - component: {fileID: 1406474922}
-  - component: {fileID: 1406474921}
+  - component: {fileID: 1406474924}
   m_Layer: 0
   m_Name: SchizophreniaTP
-  m_TagString: Untagged
+  m_TagString: LobbyBack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19519,28 +19519,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1920403907}
   m_LocalEulerAnglesHint: {x: 0, y: 15.51, z: 0}
---- !u!64 &1406474921
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406474919}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1406474922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19591,6 +19569,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406474919}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1406474924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406474919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99999994, y: 1, z: 0.0000000027939677}
+  m_Center: {x: -0.000015258789, y: 0, z: 0}
 --- !u!1 &1424179664
 GameObject:
   m_ObjectHideFlags: 0
@@ -31443,6 +31442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2136077619}
+  - component: {fileID: 2136077620}
   m_Layer: 0
   m_Name: SceneControl
   m_TagString: Untagged
@@ -31465,6 +31465,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136077620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136077618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f18487b161bd894592aa435fb6cff40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2138409221
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ TagManager:
   - sad_frame
   - scared_frame
   - angry_frame
+  - puzzleGrab
   - bipolarKey
   - mania
   - calm
@@ -40,7 +41,7 @@ TagManager:
   - BGM
   - ToLobby
   - End
-  - puzzleGrab
+  - LobbyBack
   layers:
   - Default
   - TransparentFX
