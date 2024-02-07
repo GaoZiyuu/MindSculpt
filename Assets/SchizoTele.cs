@@ -7,7 +7,7 @@ public class SchizoTele : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "LobbyBack")
+        if (other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("Lobby");
         }
