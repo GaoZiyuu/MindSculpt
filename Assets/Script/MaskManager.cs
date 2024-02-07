@@ -19,11 +19,6 @@ public class MaskManager : MonoBehaviour
             // Activate the Puzzle GameObject
             puzzleObj.SetActive(true);
         }
-        else
-        {
-            // Deactivate the Puzzle GameObject if any of the boolean variables is false
-            puzzleObj.SetActive(false);
-        }
     }
 
     private bool AreAllBoolsTrue()

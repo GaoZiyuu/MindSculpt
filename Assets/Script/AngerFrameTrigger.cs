@@ -18,7 +18,7 @@ public class AngerFrameTrigger : MonoBehaviour
             angerMaskHid.SetActive(true);
             wrongUI.SetActive(false);
         }
-        else if (other.gameObject.tag != "angry_mask")
+        else if (other.gameObject.tag != "angry_mask" && angerCorrect == false)
         {
             angerCorrect = false;
             wrongUI.SetActive(true);
