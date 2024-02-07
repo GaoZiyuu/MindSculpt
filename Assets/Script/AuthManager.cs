@@ -183,11 +183,12 @@ public class AuthManager : MonoBehaviour
             Debug.LogFormat("User signed in successfully: {0} ({1})", User.DisplayName, User.Email);
             warningLoginText.text = ""; //to reset warning text
 
-           // GoToSurvey();
-            confirmLoginText.text = "Logged In";
-            SceneManager.LoadScene(1);
+                // GoToSurvey();
+                confirmLoginText.text = "Logged In";
+                SceneManager.LoadScene("Lobby");
 
-        }
+
+            }
         }catch(Exception e)
         {
             Debug.LogException(e);
@@ -281,7 +282,7 @@ public class AuthManager : MonoBehaviour
                         //UIManager.instance.LoginScreen();
                         warningRegisterText.text = ""; //reset warning text
                         registerLoginText.text = "Account Created and Logging In...";
-                        SceneManager.LoadScene(1);
+                        SceneManager.LoadScene("Lobby");
 
                     }
                 }
