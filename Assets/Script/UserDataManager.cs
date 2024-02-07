@@ -1,3 +1,8 @@
+/* 
+ * Author : Gao Ziyu
+ * Date: 06/02/2024
+ * Description: This script is for user data and send data to firebase database to store data and be used to display out at dashboard on website
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +13,15 @@ using Firebase.Auth;
 
 public class UserDataManager : MonoBehaviour
 {
+    /// <summary>
+    /// database reference
+    /// </summary>
     DatabaseReference db;
-    int userCounter = 0; // Counter for generating unique user IDs
+
+    /// <summary>
+    /// Counter for generating unique user IDs
+    /// </summary>
+    int userCounter = 0;
 
     private void Start()
     {
@@ -19,6 +31,12 @@ public class UserDataManager : MonoBehaviour
         });
     }
 
+    /// <summary>
+    /// save user data
+    /// </summary>
+    /// <param name="gender"></param>
+    /// <param name="age"></param>
+    /// <param name="message"></param>
     public void SaveUserData(string gender, int age, string message)
     {
         if (db != null)
@@ -26,6 +44,7 @@ public class UserDataManager : MonoBehaviour
             string userId = "user" + userCounter.ToString(); // Generate a unique user ID
             userCounter++;
 
+            //send to FB
             UserData userData = new UserData(gender, age, message);
             string json = JsonUtility.ToJson(userData);
             db.Child("users").Child(userId).SetRawJsonValueAsync(json);
@@ -36,6 +55,9 @@ public class UserDataManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// user data
+    /// </summary>
     public class UserData
     {
         public string gender;
