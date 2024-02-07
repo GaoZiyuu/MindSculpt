@@ -13,13 +13,15 @@ public class AngerFrameTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "angry_mask")
         {
-            angerMaskHid.SetActive(true);
-            Destroy(angerMaskGrab);
             angerCorrect = true;
+            Destroy(angerMaskGrab);
+            angerMaskHid.SetActive(true);
+            wrongUI.SetActive(false);
         }
         else if (other.gameObject.tag != "angry_mask")
         {
             angerCorrect = false;
+            wrongUI.SetActive(true);
             StartCoroutine(DeactivateAfterDelay(2f));
         }
     }

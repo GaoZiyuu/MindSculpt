@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MaskManager : MonoBehaviour
 {
-    public happy happy;
+    public happyFrameTrigger happy;
     public SadFrameTrigger sad;
     public FearFrameTrigger fear;
     public AngerFrameTrigger angry;
