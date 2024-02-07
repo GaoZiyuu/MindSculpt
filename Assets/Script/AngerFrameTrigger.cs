@@ -7,30 +7,28 @@ public class AngerFrameTrigger : MonoBehaviour
     public bool angerCorrect = false;
     public GameObject angerMaskHid;
     public GameObject angerMaskGrab;
+    public GameObject wrongUI;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "angry_mask")
         {
             angerMaskHid.SetActive(true);
-            angerCorrect = true;
             Destroy(angerMaskGrab);
+            angerCorrect = true;
         }
         else
         {
             angerCorrect = false;
-            StartCoroutine(ShakeCamera(2f));
+            StartCoroutine(DeactivateAfterDelay(2f));
         }
     }
 
-    private IEnumerator ShakeCamera(float duration)
+    private IEnumerator DeactivateAfterDelay(float delay)
     {
-        // Logic for camera shake...
-        Debug.Log("Camera shake triggered!");
+        yield return new WaitForSeconds(delay);
 
-        yield return new WaitForSeconds(duration);
-
-        // Stop or reset camera shake, if applicable...
-        Debug.Log("Camera shake stopped!");
+        // Deactivate the ui after the delay
+        wrongUI.SetActive(false);
     }
 }
