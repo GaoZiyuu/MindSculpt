@@ -11,41 +11,50 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Controls the movement and behavior of a monster in the game.
+/// </summary>
 public class MonsterMovement : MonoBehaviour
 {
-    public Transform[] waypoints;
-    public float moveSpeed = 1f;  // Speed of the monster
-    private int currentWaypointIndex = 0;
-    public AudioSource monsterSound;
-    public AudioSource monsterScream;
-    public AudioSource booksFallSound;
-    public AudioSource lightSpoilSound;
-    public GameObject lightSource;
-    public GameObject ceilingLightObj;
-    public AudioSource runningMonsterSound;
-    public AudioSource doorBangingSound;
-    public TMP_InputField codeInput;
-    public TMP_Text errorMsgTxt;
-    private string correctCode = "10899";
-    public float timeValue = 60;
-    public TMP_Text TimerTxt;
-    private bool monsterIsBreakingIn = false;
+    public Transform[] waypoints; // Array of waypoints for the monster to move between
+    public float moveSpeed = 1f; // Speed of the monster
+    private int currentWaypointIndex = 0; // Index of the current waypoint
+    public AudioSource monsterSound; // Audio source for general monster sound
+    public AudioSource monsterScream; // Audio source for the monster's scream
+    public AudioSource booksFallSound; // Audio source for the sound of falling books
+    public AudioSource lightSpoilSound; // Audio source for spoiling the light
+    public GameObject lightSource; // GameObject representing the light source
+    public GameObject ceilingLightObj; // GameObject representing the ceiling light
+    public AudioSource runningMonsterSound; // Audio source for the sound of a running monster
+    public AudioSource doorBangingSound; // Audio source for the sound of banging doors
+    public TMP_InputField codeInput; // Input field for entering a code
+    public TMP_Text errorMsgTxt; // Text for displaying error messages
+    private string correctCode = "10899"; // Correct code to proceed
+    public float timeValue = 60; // Time value for countdown
+    public TMP_Text TimerTxt; // Text for displaying the countdown timer
+    private bool monsterIsBreakingIn = false; // Flag indicating if the monster is breaking in
 
+    /// <summary>
+    /// Updates the movement and behavior of the monster.
+    /// </summary>
     void Update()
     {
         MoveToWaypoints();
 
-        if (monsterIsBreakingIn )
+        if (monsterIsBreakingIn)
         {
             TimerCountDown();
         }
 
         if (timeValue == 0)
         {
-            StartCoroutine(restartScene() );
+            StartCoroutine(restartScene());
         }
     }
 
+    /// <summary>
+    /// Moves the monster towards the defined waypoints.
+    /// </summary>
     void MoveToWaypoints()
     {
         // Check if there are waypoints
@@ -65,17 +74,20 @@ public class MonsterMovement : MonoBehaviour
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
         }
     }
+
+    /// <summary>
+    /// Checks the entered code against the correct code.
+    /// </summary>
     public void CheckCode()
     {
         string enteredCode = codeInput.text;
 
         if (enteredCode == correctCode)
         {
-            // Code is correct, do something here (e.g., proceed to the next level)
+            // Code is correct, proceed to the next level
             Debug.Log("Code is correct!");
             errorMsgTxt.text = ""; // Clear the error message
             startLoadScene();
-
         }
         else
         {
@@ -83,40 +95,56 @@ public class MonsterMovement : MonoBehaviour
             Debug.Log("Incorrect code!");
             monsterScream.Play();
             errorMsgTxt.text = "Incorrect code. Try again.";
-            //StartCoroutine(restartScene());
         }
     }
 
+    /// <summary>
+    /// Restarts the scene after a delay.
+    /// </summary>
     private IEnumerator restartScene()
     {
         monsterScream.Play();
         yield return new WaitForSeconds(3f);
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
-        yield return null;
     }
+
+    /// <summary>
+    /// Starts loading the next scene.
+    /// </summary>
     public void startLoadScene()
     {
-
         SceneManager.LoadScene("Lobby");
-        Debug.Log("next Scene loading");
-        //load scene
+        Debug.Log("Next Scene loading");
     }
+
+    /// <summary>
+    /// Plays the monster's scream sound.
+    /// </summary>
     public void playScream()
     {
         monsterScream.Play();
     }
 
+    /// <summary>
+    /// Plays the sound of falling books.
+    /// </summary>
     public void playBooksFallSound()
     {
         booksFallSound.Play();
     }
 
-   public void playLightSpoilSound()
+    /// <summary>
+    /// Plays the sound of spoiling light and triggers the monster coming in.
+    /// </summary>
+    public void playLightSpoilSound()
     {
         StartCoroutine(monsterComingIn());
     }
 
+    /// <summary>
+    /// Coroutine for the sequence of events when the monster is breaking in.
+    /// </summary>
     private IEnumerator monsterComingIn()
     {
         monsterIsBreakingIn = true;
@@ -133,15 +161,16 @@ public class MonsterMovement : MonoBehaviour
         monsterScream.Play();
         yield return new WaitForSeconds(2f);
         doorBangingSound.Play();
-        
-        yield return null;
     }
 
+    /// <summary>
+    /// Handles the countdown timer.
+    /// </summary>
     private void TimerCountDown()
     {
-        if (timeValue >0)
+        if (timeValue > 0)
         {
-            timeValue -=Time.deltaTime;
+            timeValue -= Time.deltaTime;
         }
         else
         {
@@ -150,9 +179,12 @@ public class MonsterMovement : MonoBehaviour
         DisplayTime(timeValue);
     }
 
+    /// <summary>
+    /// Displays the countdown timer in minutes and seconds.
+    /// </summary>
     private void DisplayTime(float timeToDisplay)
     {
-        if(timeToDisplay < 0)
+        if (timeToDisplay < 0)
         {
             timeToDisplay = 0;
         }
