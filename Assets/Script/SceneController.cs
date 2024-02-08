@@ -1,3 +1,9 @@
+/* 
+ * Author : Leong Yen Zhen
+ * Date: 30/01/2024
+ * Description: Script for Changing of scene
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,8 +13,11 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class SceneController : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    
+    /// <summary>
+    /// once player enters the triggers, scene will change accordingly
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Schizophrenia")

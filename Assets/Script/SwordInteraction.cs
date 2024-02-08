@@ -7,11 +7,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 
+ * Author : Leong Yen Zhen
+ * Date: 30/01/2024
+ * Description: Script for sword interaction in eating disorder scene
+ */
+
+
 using TMPro;
 using UnityEngine.UI;
 
 public class SwordInteraction : MonoBehaviour
 {
+    /// <summary>
+    /// store gameobject ui
+    /// </summary>
     public GameObject correctUI;
     public GameObject wrongUI;
     public GameObject Done;
@@ -19,6 +29,10 @@ public class SwordInteraction : MonoBehaviour
     public int destroyed;
     //public TMP_Text test;
 
+    /// <summary>
+    /// when player enters trigger, ui will appears
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Negative")
@@ -54,6 +68,10 @@ public class SwordInteraction : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// to make the ui close after 5 seconds
+    /// </summary>
+    /// <returns></returns>
     IEnumerator WaitCoroutine()
     {
 
